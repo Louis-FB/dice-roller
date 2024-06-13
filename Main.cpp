@@ -13,7 +13,7 @@ int main() {
 		if (choice == 'n')
 			break;
 
-		printDice(randomNumber());
+		printDice(randomNumber() + 1);
 	}
 
 	return 0;
@@ -24,41 +24,62 @@ int randomNumber() {
 
 	srand(time(0));
 
-	return rand() % 8;
+	return rand() % 6;
 
 }
 
 void printDice(int side) { // show ascii art of die
 	switch (side) {
 	case 1:
-		std::cout << "One (test)";
+		//std::cout << "One (test)\n";
+		std::cout << "-------\n";
+		std::cout << "|     |\n";
+		std::cout << "|  #  |\n";
+		std::cout << "|     |\n";
+		std::cout << "-------\n";
 		break;
 	case 2:
-		std::cout << "Two (test)";
+		//std::cout << "Two (test)\n";
+		std::cout << "-------\n";
+		std::cout << "|   # |\n";
+		std::cout << "|     |\n";
+		std::cout << "| #   |\n";
+		std::cout << "-------\n";
 		break;
 	case 3:
-		std::cout << "Three (test)";
+		//std::cout << "Three (test)\n";
+		std::cout << "-------\n";
+		std::cout << "|   # |\n";
+		std::cout << "|  #  |\n";
+		std::cout << "| #   |\n";
+		std::cout << "-------\n";
 		break;
 	case 4:
-		std::cout << "Four (test)";
+		//std::cout << "Four (test)\n";
+		std::cout << "-------\n";
+		std::cout << "| # # |\n";
+		std::cout << "|     |\n";
+		std::cout << "| # # |\n";
+		std::cout << "-------\n";
 		break;
 	case 5:
-		std::cout << "Five (test)";
+		//std::cout << "Five (test)\n";
+		std::cout << "-------\n";
+		std::cout << "| # # |\n";
+		std::cout << "|  #  |\n";
+		std::cout << "| # # |\n";
+		std::cout << "-------\n";
 		break;
 	case 6:
-		std::cout << "Six (test)";
-		break;
-	case 7:
-		std::cout << "Seven (test)";
-		break;
-	case 8:
-		std::cout << "Eight (test)";
-		break;
-	case 9:
-		std::cout << "Nine (test)";
+		//std::cout << "Six (test)\n";
+		std::cout << "-------\n";
+		std::cout << "| # # |\n";
+		std::cout << "| # # |\n";
+		std::cout << "| # # |\n";
+		std::cout << "-------\n";
 		break;
 	default:
-		std::cout << "???";
+		std::cout << "???\n";
 		break;
 	}
 	
