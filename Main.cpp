@@ -1,10 +1,14 @@
 #include <iostream>
 #include <random>
+#include <cstdlib>
+#include <time.h>
 
 int randomNumber();
 void printDice(int side);
 
 int main() {
+
+	srand((unsigned)time(NULL)); 
 
 	while (true) {
 		std::cout << "\nDo you want to roll the dice? (y/n) ";
@@ -22,16 +26,12 @@ int main() {
 
 int randomNumber() {
 
-	srand((unsigned) time(NULL));
-
 	return 1 + (rand() % 6); // 1 (offset) - 6 (range)
-
 }
 
 void printDice(int side) { // show ascii art of dice
 	switch (side) {
 	case 1:
-		//std::cout << "One (test)\n";
 		std::cout << "-------\n";
 		std::cout << "|     |\n";
 		std::cout << "|  #  |\n";
@@ -39,7 +39,6 @@ void printDice(int side) { // show ascii art of dice
 		std::cout << "-------\n";
 		break;
 	case 2:
-		//std::cout << "Two (test)\n";
 		std::cout << "-------\n";
 		std::cout << "|   # |\n";
 		std::cout << "|     |\n";
@@ -47,7 +46,6 @@ void printDice(int side) { // show ascii art of dice
 		std::cout << "-------\n";
 		break;
 	case 3:
-		//std::cout << "Three (test)\n";
 		std::cout << "-------\n";
 		std::cout << "|   # |\n";
 		std::cout << "|  #  |\n";
@@ -55,7 +53,6 @@ void printDice(int side) { // show ascii art of dice
 		std::cout << "-------\n";
 		break;
 	case 4:
-		//std::cout << "Four (test)\n";
 		std::cout << "-------\n";
 		std::cout << "| # # |\n";
 		std::cout << "|     |\n";
@@ -63,7 +60,6 @@ void printDice(int side) { // show ascii art of dice
 		std::cout << "-------\n";
 		break;
 	case 5:
-		//std::cout << "Five (test)\n";
 		std::cout << "-------\n";
 		std::cout << "| # # |\n";
 		std::cout << "|  #  |\n";
@@ -71,7 +67,6 @@ void printDice(int side) { // show ascii art of dice
 		std::cout << "-------\n";
 		break;
 	case 6:
-		//std::cout << "Six (test)\n";
 		std::cout << "-------\n";
 		std::cout << "| # # |\n";
 		std::cout << "| # # |\n";
