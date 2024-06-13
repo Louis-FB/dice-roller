@@ -13,7 +13,7 @@ int main() {
 		if (choice == 'n')
 			break;
 
-		printDice(randomNumber() + 1);
+		printDice(randomNumber());
 	}
 
 	return 0;
@@ -22,13 +22,13 @@ int main() {
 
 int randomNumber() {
 
-	srand(time(0));
+	srand((unsigned) time(NULL));
 
-	return rand() % 6;
+	return 1 + (rand() % 6); // 1 (offset) - 6 (range)
 
 }
 
-void printDice(int side) { // show ascii art of die
+void printDice(int side) { // show ascii art of dice
 	switch (side) {
 	case 1:
 		//std::cout << "One (test)\n";
