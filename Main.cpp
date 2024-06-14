@@ -1,3 +1,4 @@
+﻿#include <windows.h>
 #include <iostream>
 #include <random>
 #include <cstdlib>
@@ -7,7 +8,6 @@ int randomNumber();
 void printDice(int side);
 
 int main() {
-
 	srand((unsigned)time(NULL)); 
 
 	while (true) {
@@ -29,48 +29,51 @@ int randomNumber() {
 	return 1 + (rand() % 6); // 1 (offset) - 6 (range)
 }
 
-void printDice(int side) { // show ascii art of dice
+void printDice(int side) { // show ascii art of dice // \u25CF
+	SetConsoleOutputCP(CP_UTF8);
 	switch (side) {
 	case 1:
+		
 		std::cout << "-------\n";
 		std::cout << "|     |\n";
-		std::cout << "|  #  |\n";
+		std::cout << "|  ●  |\n";
 		std::cout << "|     |\n";
 		std::cout << "-------\n";
+		
 		break;
 	case 2:
 		std::cout << "-------\n";
-		std::cout << "|   # |\n";
+		std::cout << "|   ● |\n";
 		std::cout << "|     |\n";
-		std::cout << "| #   |\n";
+		std::cout << "| ●   |\n";
 		std::cout << "-------\n";
 		break;
 	case 3:
 		std::cout << "-------\n";
-		std::cout << "|   # |\n";
-		std::cout << "|  #  |\n";
-		std::cout << "| #   |\n";
+		std::cout << "|   ● |\n";
+		std::cout << "|  ●  |\n";
+		std::cout << "| ●   |\n";
 		std::cout << "-------\n";
 		break;
 	case 4:
 		std::cout << "-------\n";
-		std::cout << "| # # |\n";
+		std::cout << "| ● ● |\n";
 		std::cout << "|     |\n";
-		std::cout << "| # # |\n";
+		std::cout << "| ● ● |\n";
 		std::cout << "-------\n";
 		break;
 	case 5:
 		std::cout << "-------\n";
-		std::cout << "| # # |\n";
-		std::cout << "|  #  |\n";
-		std::cout << "| # # |\n";
+		std::cout << "| ● ● |\n";
+		std::cout << "|  ●  |\n";
+		std::cout << "| ● ● |\n";
 		std::cout << "-------\n";
 		break;
 	case 6:
 		std::cout << "-------\n";
-		std::cout << "| # # |\n";
-		std::cout << "| # # |\n";
-		std::cout << "| # # |\n";
+		std::cout << "| ● ● |\n";
+		std::cout << "| ● ● |\n";
+		std::cout << "| ● ● |\n";
 		std::cout << "-------\n";
 		break;
 	default:
